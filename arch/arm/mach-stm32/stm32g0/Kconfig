@@ -1,0 +1,8 @@
+if STM32G0
+
+config TARGET_STM32G071_DISCOVERY
+	bool "STM32F429 Discovery board"
+
+source "board/st/stm32g071-discovery/Kconfig"
+
+endif

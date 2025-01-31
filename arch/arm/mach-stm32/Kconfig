@@ -16,6 +16,22 @@ config STM32F4
 	select STM32_TIMER
 	select TIMER
 
+config STM32G0
+	bool "stm32g0 family"
+	select CLK
+	select DM_GPIO
+	select DM_RESET
+	select MISC
+	select PINCTRL
+	select PINCTRL_STM32
+	select RAM
+	select STM32_RCC
+	select STM32_RESET
+	select STM32_SDRAM
+	select STM32_SERIAL
+	select STM32_TIMER
+	select TIMER
+
 config STM32F7
 	bool "stm32f7 family"
 	select CLK
@@ -53,6 +69,7 @@ config STM32H7
 	select TIMER
 
 source "arch/arm/mach-stm32/stm32f4/Kconfig"
+source "arch/arm/mach-stm32/stm32g0/Kconfig"
 source "arch/arm/mach-stm32/stm32f7/Kconfig"
 source "arch/arm/mach-stm32/stm32h7/Kconfig"
 
